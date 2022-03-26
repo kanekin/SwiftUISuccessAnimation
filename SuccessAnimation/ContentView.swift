@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var isSheetPresented: Bool = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Button("Show Success Animation") {
+                isSheetPresented = !isSheetPresented
+            }
+        }
+        .sheet(isPresented: $isSheetPresented) {
+            VStack {
+                SuccessView(
+                    message: "Success",
+                    onAnimationCompleted: {
+                        isSheetPresented = false
+                    }
+                )
+            }
+        }
+        
     }
 }
 
