@@ -3,13 +3,11 @@
 //  NetworkDemo
 //
 //  Created by Tatsuya Kaneko on 23/03/2022.
+//  Credits to the article "withAnimation completion callback with animatable modifiers" written by Antoine van der Lee: https://www.avanderlee.com/swiftui/withanimation-completion-callback/
 //
 
 import SwiftUI
 
-
-
-// Credits to the article withAnimation completion callback with animatable modifiers written by Antoine van der Lee: https://www.avanderlee.com/swiftui/withanimation-completion-callback/
 extension View {
     
     /// Calls the completion handler whenever an animation on the given value completes.
